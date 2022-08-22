@@ -17,7 +17,7 @@ if [ -d "$TARGET_DIR" ]; then
 	rm -rf "$TARGET_DIR"
 fi
 
-npx pkg .
+npx pkg --no-bytecode --public-packages "*" --public .
 
 # Searching in the current directory
 for file in "$TARGET_DIR/"*; do
